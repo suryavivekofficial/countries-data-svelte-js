@@ -1,30 +1,46 @@
 <script>
-	export let name;
+
+let isDarkTheme = false 
+let theme = ''
+$: {
+    if (isDarkTheme){
+    theme = 'light'
+  } else {
+    theme = 'dark'
+  }}
+
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+:global(body){
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+nav{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--elements);
+}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+nav h2{
+  font-size: 1.5rem;
+}
+
+nav > *{
+  margin: 0rem 3rem;
+}
 </style>
+
+<div class="{theme}">
+  <nav class="navigation">
+    <h2>Where in the world?</h2>
+    <input type="checkbox" bind:checked={isDarkTheme} >
+  </nav>
+</div>
+
