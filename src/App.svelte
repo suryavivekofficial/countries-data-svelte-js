@@ -2,6 +2,7 @@
 // Importing components from components folder
 import Filter from './components/Filter.svelte'
 import SearchBar from './components/SearchBar.svelte'
+import Country from './components/Country.svelte'
 
 //Theme toggling variable.
 let isDarkTheme = false
@@ -64,4 +65,6 @@ let isDarkTheme = false
 		<SearchBar/>
 		<Filter />
   </div>
+  <Country />
+  
 </div>
