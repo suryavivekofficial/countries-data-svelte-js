@@ -2,10 +2,25 @@
 	import { countries } from '../stores/store'
 </script>
 
-<style type="text/css">
-	.country {
-		background: lightblue;
-		color: purple;
+<style lang="scss">
+	.container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 3rem;
+		padding: 1rem;
+
+		.country {
+			color: purple;
+			border-radius: 10px;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			
+			img {
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				height: auto;
+				width: 100%;
+			}
+		}
 	}
 </style>
 

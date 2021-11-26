@@ -8,7 +8,7 @@ const fetchCountries = async () => {
 	const loadedData = data.map(country => {
 		return {
 			"name": country.name.common,
-			"population": country.population,
+			"population": country.population.toLocaleString('en-US'),
 			"region": country.region,
 			"capital": country.capital,
 			"flag": country.flags.svg,

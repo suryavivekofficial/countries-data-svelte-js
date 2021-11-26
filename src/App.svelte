@@ -16,6 +16,7 @@ let isDarkTheme = false
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 #body {
